@@ -38,8 +38,7 @@ public class TripleTrouble {
     private static Stream<List<Integer>> slidingWindow(int size, Long num) {
         final String sNum = num.toString();
         return IntStream.range(0, sNum.length() - size + 1)
-                .mapToObj(index -> numToList(sNum.substring(index, index + size)))
-                .peek(System.out::println);
+                .mapToObj(index -> numToList(sNum.substring(index, index + size)));
     }
 
     private static List<Integer> numToList(String sNum) {
